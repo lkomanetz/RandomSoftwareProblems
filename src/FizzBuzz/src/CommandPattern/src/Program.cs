@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CommandExample {
 
@@ -6,11 +7,12 @@ namespace CommandExample {
 
         static void Main(string[] args) {
             CommandInvoker invoker = new CommandInvoker();
+            IList<ICommand> commands = new List<ICommand>();
 
-            for (int i = 1; i <= 100; ++i) {
-                var cmd = new FizzBuzzCommand(i);
-                invoker.Invoke(cmd);
-            }
+            for (int i = 1; i <= 100; ++i) 
+                commands.Add(new FizzBuzzCommand(i));
+
+            invoker.Invoke(commands);
         }
 
     }
