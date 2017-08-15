@@ -8,7 +8,6 @@ namespace src {
         static void Main(string[] args) {
             try {
                 Program p = new Program();
-                Int32 i = 1;
                 int size = p.GetListSize();
                 var list = p.BuildList(size);
 
