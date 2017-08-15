@@ -23,6 +23,8 @@ namespace src {
 
         internal LinkedListNode<int> GetMiddleNode(LinkedList<int> list) {
             LinkedListNode<int> node = list.First;
+
+            // I'm starting iteration at 1 because I've already gotten the first node
             int iteration = 1;
             while (iteration != list.Count) {
                 if (iteration % 2 == 0) {
