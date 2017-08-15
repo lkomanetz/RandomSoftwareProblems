@@ -13,7 +13,10 @@ namespace PalindromeExample {
             PalindromeChecker checker = new PalindromeChecker();
             bool isPalindrome = checker.Check(args[0]);
 
-            string msg = (isPalindrome) ? $"'{args[0]}' is a palindrome" : $"'{args[0]}' is not a palindrome";
+            string msg = (isPalindrome) ?
+                $"'{args[0]}' is a palindrome" :
+                $"'{args[0]}' is not a palindrome";
+
             Console.WriteLine(msg);
         }
 
