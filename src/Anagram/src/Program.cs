@@ -37,7 +37,7 @@ namespace AnagramExample {
              * Multicast delegates are mostly known for their use in events.  Events don't return anything.
              * Since my delegate returns a string I have to iterate through the invocation list in order
              * to capture each return value.  This really isn't the cleanest because IsAnagram basically
-             * needed to know that it had to do approach the delegate in this manner.  
+             * needed to know that it had to approach the delegate in this manner.  
              * If this was production code I'd come up with a cleaner solution so this method didn't need
              * any knowledge of how it's expecting formatter to be a multicast delegate.
              */
@@ -54,9 +54,9 @@ namespace AnagramExample {
             /*
              * This is the LINQ solution.  Why go with this solution versus using a dictionary and making
              * sure char arrays are only iterated through once to do the checks?  Because I'm not putting
-             * an arbitrary consraint on this solution.  Iterating through the one string to create a 
+             * an arbitrary constraint on this solution.  Iterating through the one string to create a 
              * dictionary and iterating through the second to check if the key exists in the dictionary is
-             * an option.  This code is quite a bit more simple, in my opinion it's more readable, and it doesn't
+             * an option.  This code is quite a bit simpler, in my opinion it's more readable, and it doesn't
              * prematurely try to optimize code that may not need to be optimized.
              */
             return a.ToCharArray().Except(b).Count() == 0;
