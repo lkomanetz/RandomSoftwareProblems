@@ -47,7 +47,6 @@ namespace AnagramExample {
             }
 
             if (a.Length != b.Length) {
-                Console.WriteLine("Length isn't the same");
                 return false;
             }
 
